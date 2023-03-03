@@ -12,6 +12,7 @@ ipykernel = "*"
 black = "*"
 scikit-learn = "*"
 pygame = "*"
+tensorflow = "*"
 
 [dev-packages]
 
