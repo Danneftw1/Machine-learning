@@ -13,6 +13,7 @@ black = "*"
 scikit-learn = "*"
 pygame = "*"
 tensorflow = "*"
+fuzzywuzzy = "*"
 
 [dev-packages]
 
