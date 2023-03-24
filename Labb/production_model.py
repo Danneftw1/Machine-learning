@@ -2,16 +2,17 @@ import pandas as pd
 import joblib
 
 # import test_samples
-test_samples = pd.read_csv('../test_samples.csv')
+test_samples = pd.read_csv("Labb/test_samples.csv")
 
 # import model
-model = joblib.load('svm_model.pkl')
+model = joblib.load('Labb/svm_model.pkl')
 
-# make a prediction on the 100 test samples with the model
-predictions = model.predict(test_samples)
+# choose X and y to predict on test_samples
+X = test_samples.drop(columns=['cardio'])
+y = test_samples['cardio']
 
-# print the predictions
-print(predictions)
+# predict on test_samples
+y_pred = model.predict(X)
 
-# save the predictions to a csv file
-pd.DataFrame(predictions).to_csv('predictions.csv')
+# print accuracy score
+print("Accuracy score: ", model.score(X, y))
