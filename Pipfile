@@ -15,6 +15,7 @@ pygame = "*"
 tensorflow = "*"
 fuzzywuzzy = "*"
 joblib = "*"
+tqdm = "*"
 
 [dev-packages]
 
